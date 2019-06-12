@@ -1,0 +1,16 @@
+// Given a rectangular matrix of characters, add a border of asterisks(*) to it.
+function addBorder(picture: string[]): any {
+    const wall = '*' // .repeat(picture[0].length + 2);
+
+    picture.unshift(wall);
+    picture.push(wall);
+
+    for (let i = 1; i < picture.length - 1; i++) {
+        picture[i] = '*'.concat(picture[i], '*');
+    }
+
+    return picture;
+}
+
+console.log(addBorder(["abc", "ded"])); // [ '*', '*abc*', '*ded*', '*' ]
+                            // must be ['*****', '*abc*', '*ded*', '*****'] 
