@@ -1,7 +1,9 @@
+// Write a function that returns the sum of two numbers.
 function add(param1: number, param2: number): number {
     return param1 + param2;
 }
 
+// Write a function that returns the sum of all numbers regardless of # of params.
 function add2(...param1: number[]): number {
     let total = 0;
 
